@@ -3,6 +3,7 @@ var app = angular.module('bookspot', []);
 app.controller('bookmgr', ['$scope', function($scope) {
 
   $scope.displayMode = "list";
+  $scope.currentBook = null;
 
   $scope.listBooks = function () {
     $scope.books = [
