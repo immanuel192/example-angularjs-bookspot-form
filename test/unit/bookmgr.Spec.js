@@ -52,4 +52,18 @@ describe("Book Management Controller Unit testing", function () {
     expect(mockScope.displayMode).toEqual("list");
     expect(mockScope.currentBook).toBeNull();
   });
+
+  it('call saveEditForm() with defined ID', function() {
+    var book = { id: 'e48f724a-f332-4a6d-be37-e21d9a94db89', title: "Book4", 
+          category: "Programming Language", price: 3.15 };
+
+    spyOn(mockScope, 'createBook');
+    spyOn(mockScope, 'updateBook');
+
+    mockScope.saveEditForm(book);
+
+    expect(mockScope.updateBook).toHaveBeenCalled();
+    expect(mockScope.updateBook.calls.count()).toEqual(1);
+    expect(mockScope.createBook.calls.count()).toEqual(0);
+  });
 });
