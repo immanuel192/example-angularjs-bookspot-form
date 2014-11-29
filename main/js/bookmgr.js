@@ -55,6 +55,7 @@ app.controller('bookmgr', ['$scope', function($scope) {
   }
   
   $scope.deleteBook = function (book) {
+    $scope.books.splice($scope.books.indexOf(book), 1);
   }
 
   $scope.listBooks();
