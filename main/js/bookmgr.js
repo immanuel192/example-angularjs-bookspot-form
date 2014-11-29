@@ -20,6 +20,10 @@ app.controller('bookmgr', ['$scope', function($scope) {
     ];
   }
 
+  $scope.loadEditForm = function (book) {
+
+  }
+  
   $scope.listBooks();
 
   var generateUUID = function(){

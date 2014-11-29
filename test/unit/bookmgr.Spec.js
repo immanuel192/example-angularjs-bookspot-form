@@ -24,4 +24,12 @@ describe("Book Management Controller Unit testing", function () {
       expect(mockScope.books[i].title).toEqual("Book" + (i + 1));
     }
   });
+
+  it('call loadEditForm() without parameters', function() {
+    mockScope.loadEditForm();
+
+    expect(mockScope.displayMode).toEqual("edit");
+    expect(mockScope.currentBook).not.toBeNull();
+    expect(mockScope.currentBook.id).toBeUndefined();
+  });
 });
