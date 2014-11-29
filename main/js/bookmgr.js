@@ -29,7 +29,23 @@ app.controller('bookmgr', ['$scope', function($scope) {
     $scope.currentBook = null;
     $scope.displayMode = "list";
   }
-  
+
+  $scope.saveEditForm = function (book) {
+    if (angular.isDefined(book.id)) {
+      $scope.updateBook(book);
+    } else {
+      $scope.createBook(book);
+    }
+  }
+
+  $scope.createBook = function(book) {
+
+  }
+
+  $scope.updateBook = function(book) {
+
+  }
+
   $scope.listBooks();
 
   var generateUUID = function(){
