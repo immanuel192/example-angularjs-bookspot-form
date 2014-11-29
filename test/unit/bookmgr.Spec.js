@@ -44,4 +44,12 @@ describe("Book Management Controller Unit testing", function () {
     expect(mockScope.currentBook.id).toEqual('552b3ca5-cd81-40e7-97c6-3bcd2a3bec17');
     expect(mockScope.currentBook.title).toEqual("Book3");
   });
+
+  it('call cancelEditForm() to comeback to list', function() {
+    mockScope.loadEditForm();
+    mockScope.cancelEditForm();
+
+    expect(mockScope.displayMode).toEqual("list");
+    expect(mockScope.currentBook).toBeNull();
+  });
 });
