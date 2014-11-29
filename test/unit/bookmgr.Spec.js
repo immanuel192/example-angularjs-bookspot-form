@@ -41,7 +41,7 @@ describe("Book Management Controller Unit testing", function () {
 
     expect(mockScope.displayMode).toEqual("edit");
     expect(mockScope.currentBook).not.toBeNull();
-    expect(mockScope.currentBook.id).toEqual(3);
-    expect(mockScope.currentBook.name).toEqual("Book4");
+    expect(mockScope.currentBook.id).toEqual('552b3ca5-cd81-40e7-97c6-3bcd2a3bec17');
+    expect(mockScope.currentBook.title).toEqual("Book3");
   });
 });

@@ -21,7 +21,8 @@ app.controller('bookmgr', ['$scope', function($scope) {
   }
 
   $scope.loadEditForm = function (book) {
-
+    $scope.currentBook = book ? angular.copy(book) : {};
+    $scope.displayMode = "edit";
   }
   
   $scope.listBooks();
