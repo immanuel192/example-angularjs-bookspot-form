@@ -13,11 +13,14 @@
                 <td>{{item.title}}</td>
                 <td>{{item.category}}</td>
                 <td>{{item.price | currency}}</td>
-                <td></td>
+                <td>
+                    <button ng-click="loadEditForm(item)">Edit</button>
+                </td>
             </tr>
         </tbody>
     </table>
     <div>
         <button ng-click="listBooks()">Refresh</button>
+        <button ng-click="loadEditForm()">Add</button>
     </div>
 </div>
