@@ -38,8 +38,10 @@ app.controller('bookmgr', ['$scope', function($scope) {
     }
   }
 
-  $scope.createBook = function(book) {
-
+  $scope.createBook = function (book) {
+    book.id = generateUUID();
+    $scope.books.push(book);
+    $scope.displayMode = "list";
   }
 
   $scope.updateBook = function(book) {
