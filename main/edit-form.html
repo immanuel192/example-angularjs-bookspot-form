@@ -1,0 +1,16 @@
+﻿<div>
+    <div>
+        <label>Title:</label>
+        <input ng-model="currentBook.title" />
+    </div>
+    <div>
+        <label>Category:</label>
+        <input ng-model="currentBook.category" />
+    </div>
+    <div>
+        <label>Price:</label>
+        <input ng-model="currentBook.price" />
+    </div>
+    <button ng-click="saveEditForm(currentBook)">Save</button>
+    <button ng-click="cancelEditForm()">Cancel</button>
+</div>
