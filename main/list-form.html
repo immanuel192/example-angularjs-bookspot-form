@@ -1,0 +1,23 @@
+﻿<div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th class="text-right">Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in books">
+                <td>{{item.title}}</td>
+                <td>{{item.category}}</td>
+                <td>{{item.price | currency}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button ng-click="listBooks()">Refresh</button>
+    </div>
+</div>

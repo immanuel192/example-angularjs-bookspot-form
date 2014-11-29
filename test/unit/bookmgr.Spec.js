@@ -16,7 +16,7 @@ describe("Book Management Controller Unit testing", function () {
 
     expect(mockScope.books.length).toEqual(5);
     for(var i=0; i<5; i++) {
-      expect(mockScope.books[i]["name"]).toEqual("Book" + (i + 1));
+      expect(mockScope.books[i].title).toEqual("Book" + (i + 1));
     }
   });
 });
