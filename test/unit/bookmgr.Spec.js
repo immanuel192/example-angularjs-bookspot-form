@@ -66,4 +66,17 @@ describe("Book Management Controller Unit testing", function () {
     expect(mockScope.updateBook.calls.count()).toEqual(1);
     expect(mockScope.createBook.calls.count()).toEqual(0);
   });
+
+  it('call saveEditForm() with undefined ID', function() {
+    var book = { };
+
+    spyOn(mockScope, 'createBook');
+    spyOn(mockScope, 'updateBook');
+
+    mockScope.saveEditForm(book);
+
+    expect(mockScope.createBook).toHaveBeenCalled();
+    expect(mockScope.createBook.calls.count()).toEqual(1);
+    expect(mockScope.updateBook.calls.count()).toEqual(0);
+  });
 });
