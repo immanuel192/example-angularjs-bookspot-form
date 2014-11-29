@@ -2,6 +2,13 @@ var app = angular.module('bookspot', []);
 
 app.controller('bookmgr', ['$scope', function($scope) {
 
+  $scope.displayMode = "list";
+
+  $scope.listBooks = function () {
+  }
+
+  $scope.listBooks();
+
   var generateUUID = function(){
     var d = new Date().getTime();
     var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.
