@@ -53,6 +53,9 @@ app.controller('bookmgr', ['$scope', function($scope) {
     }
     $scope.displayMode = "list";
   }
+  
+  $scope.deleteBook = function (book) {
+  }
 
   $scope.listBooks();
 
