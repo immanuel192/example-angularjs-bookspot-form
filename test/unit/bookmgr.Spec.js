@@ -11,6 +11,11 @@ describe("Book Management Controller Unit testing", function () {
     });
   }));
 
+  it('assert the initial states of controller', function() {
+    expect(mockScope.displayMode).toEqual("list");
+    expect(mockScope.currentBook).toBeNull();
+  });
+
   it('call listBooks() should return 5 books', function() {
     mockScope.listBooks();
 
