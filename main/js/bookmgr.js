@@ -44,8 +44,14 @@ app.controller('bookmgr', ['$scope', function($scope) {
     $scope.displayMode = "list";
   }
 
-  $scope.updateBook = function(book) {
-
+  $scope.updateBook = function (book) {
+    for (var i = 0; i < $scope.books.length; i++) {
+      if ($scope.books[i].id == book.id) {
+        $scope.books[i] = book;
+        break;
+      }
+    }
+    $scope.displayMode = "list";
   }
 
   $scope.listBooks();
